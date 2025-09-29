@@ -1,13 +1,12 @@
 import {
+  SignedIn,
   SignedOut,
   SignInButton,
-  SignUpButton,
-  SignedIn,
-  UserButton,
   SignOutButton,
+  SignUpButton,
+  UserButton,
 } from '@clerk/nextjs'
 import Link from 'next/link'
-import React from 'react'
 
 export default function Header() {
   return (
@@ -29,10 +28,16 @@ export default function Header() {
               </div>
             </SignedOut>
             <SignedIn>
-              <Link href="/dashboard" className="text-gray-300 mr-4">
+              <Link
+                href="/dashboard"
+                className="text-gray-300 hover:text-white mr-4"
+              >
                 Dashboard-S
               </Link>
-              <Link href="/dashboard-c" className="text-gray-300 mr-4">
+              <Link
+                href="/dashboard-c"
+                className="text-gray-300 hover:text-white mr-4"
+              >
                 Dashboard-C
               </Link>
               <div className="text-gray-300 hover:text-white mr-4">
@@ -42,7 +47,7 @@ export default function Header() {
                 <SignOutButton />
               </div>
             </SignedIn>
-          </div>
+          </div>{' '}
         </div>
       </nav>
     </div>
