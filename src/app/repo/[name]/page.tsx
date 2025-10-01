@@ -2,7 +2,11 @@ import Repo from '@/app/components/Repo'
 import RepoDirs from '@/app/components/RepoDirs'
 import Link from 'next/link'
 import React, { Suspense } from 'react'
-export default function RepoPage({ params }: { params: { name: string } }) {
+type RepoPageProps = {
+  params: { name: string }
+}
+
+export default function RepoPage({ params }: RepoPageProps) {
   return (
     <div className="flex flex-col justify-start items-start max-w-lg">
            {' '}
